@@ -1,0 +1,18 @@
+# Only literals (no constraints) reduced scenario.
+
+# Variables
+i1, i2, i3, i4, i5, i6
+
+# Number of issues
+6
+# The issues
+1, i1
+2, i2
+3, i3
+4, i4
+5, i5
+6, i6
+
+# The constraints
+In, ( ~i1 | i1)
+Out, ( ~i1 | i1)

@@ -1,0 +1,19 @@
+# Preference Aggregation 3 (PA3).
+
+# Variables
+ab, ac, bc
+
+# Number of issues
+3
+# The issues
+1, ab
+2, ac
+3, bc
+
+# The constraints
+# abc
+In, ab | ~ac | bc
+In, ~ab | ~bc | ac
+
+Out, ab | ~ac | bc
+Out, ~ab | ~bc | ac

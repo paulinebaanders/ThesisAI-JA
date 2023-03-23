@@ -1,0 +1,19 @@
+# Conjunctive scenario (reduced).
+
+# Variables
+i1, i2, i3
+
+# Number of issues
+3
+# The issues
+1, i1
+2, i2
+3, i3
+
+# The constraints
+In, ( ~i1 | ~i2 | i3)
+In, ( i1 | ~i3 )
+In, ( i2 | ~i3)
+Out, ( ~i1 | ~i2 | i3)
+Out, ( i1 | ~i3 )
+Out, ( i2 | ~i3)

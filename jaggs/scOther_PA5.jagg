@@ -1,0 +1,149 @@
+# Preference aggregation with 3 alternatives (reduced).
+
+# Variables
+ab, ac, ad, ae, bc, bd, be, cd, ce, de
+
+# Number of issues
+10
+# The issues
+1, ab
+2, ac
+3, ad
+4, ae
+5, bc
+6, bd
+7, be
+8, cd
+9, ce
+10, de
+
+# The constraints
+In, (ab & bc) -> ac
+In, (ab & bd) -> ad
+In, (ab & be) -> ae
+In, (ac & ~bc) -> ab
+In, (ac & cd) -> ad
+In, (ac & ce) -> ae
+In, (ad & ~bd) -> ab
+In, (ad & ~cd) -> ac
+In, (ad & de) -> ae
+In, (ae & ~be) -> ab
+In, (ae & ~ce) -> ac
+In, (ae & ~de) -> ad
+
+In, (~ab & ac) -> bc
+In, (~ab & ad) -> bd
+In, (~ab & ae) -> be
+In, (bc & ~ac) -> ~ab
+In, (bc & cd) -> bd
+In, (bc & ce) -> be
+In, (bd & ~ad) -> ~ab
+In, (bd & ~cd) -> bc
+In, (bd & de) -> be
+In, (be & ~ae) -> ~ab
+In, (be & ~ce) -> bc
+In, (be & ~de) -> bd
+
+In, (~ac & ab) -> ~bc
+In, (~ac & ad) -> cd
+In, (~ac & ae) -> ce
+In, (~bc & ~ab) -> ~ac
+In, (~bc & bd) -> cd
+In, (~bc & be) -> ce
+In, (cd & ~ad) -> ~ac
+In, (cd & ~bd) -> ~bc
+In, (cd & de) -> ce
+In, (ce & ~ae) -> ~ac
+In, (ce & ~be) -> ~bc
+In, (ce & ~de) -> cd
+
+In, (~ad & ab) -> ~bd
+In, (~ad & ac) -> ~cd
+In, (~ad & ae) -> de
+In, (~bd & ~ab) -> ~ad
+In, (~bd & bc) -> ~cd
+In, (~bd & be) -> de
+In, (~cd & ~ac) -> ~ad
+In, (~cd & ~bc) -> ~bd
+In, (~cd & ce) -> de
+In, (de & ~ae) -> ~ad
+In, (de & ~be) -> ~bd
+In, (de & ~ce) -> ~cd
+
+In, (~ae & ab) -> ~be
+In, (~ae & ac) -> ~ce
+In, (~ae & ad) -> ~de
+In, (~be & ~ab) -> ~ae
+In, (~be & bc) -> ~ce
+In, (~be & bd) -> ~de
+In, (~ce & ~ac) -> ~ae
+In, (~ce & ~bc) -> ~be
+In, (~ce & cd) -> ~de
+In, (~de & ~ad) -> ~ae
+In, (~de & ~bd) -> ~be
+In, (~de & ~cd) -> ~ce
+
+Out, (ab & bc) -> ac
+Out, (ab & bd) -> ad
+Out, (ab & be) -> ae
+Out, (ac & ~bc) -> ab
+Out, (ac & cd) -> ad
+Out, (ac & ce) -> ae
+Out, (ad & ~bd) -> ab
+Out, (ad & ~cd) -> ac
+Out, (ad & de) -> ae
+Out, (ae & ~be) -> ab
+Out, (ae & ~ce) -> ac
+Out, (ae & ~de) -> ad
+
+Out, (~ab & ac) -> bc
+Out, (~ab & ad) -> bd
+Out, (~ab & ae) -> be
+Out, (bc & ~ac) -> ~ab
+Out, (bc & cd) -> bd
+Out, (bc & ce) -> be
+Out, (bd & ~ad) -> ~ab
+Out, (bd & ~cd) -> bc
+Out, (bd & de) -> be
+Out, (be & ~ae) -> ~ab
+Out, (be & ~ce) -> bc
+Out, (be & ~de) -> bd
+
+Out, (~ac & ab) -> ~bc
+Out, (~ac & ad) -> cd
+Out, (~ac & ae) -> ce
+Out, (~bc & ~ab) -> ~ac
+Out, (~bc & bd) -> cd
+Out, (~bc & be) -> ce
+Out, (cd & ~ad) -> ~ac
+Out, (cd & ~bd) -> ~bc
+Out, (cd & de) -> ce
+Out, (ce & ~ae) -> ~ac
+Out, (ce & ~be) -> ~bc
+Out, (ce & ~de) -> cd
+
+Out, (~ad & ab) -> ~bd
+Out, (~ad & ac) -> ~cd
+Out, (~ad & ae) -> de
+Out, (~bd & ~ab) -> ~ad
+Out, (~bd & bc) -> ~cd
+Out, (~bd & be) -> de
+Out, (~cd & ~ac) -> ~ad
+Out, (~cd & ~bc) -> ~bd
+Out, (~cd & ce) -> de
+Out, (de & ~ae) -> ~ad
+Out, (de & ~be) -> ~bd
+Out, (de & ~ce) -> ~cd
+
+Out, (~ae & ab) -> ~be
+Out, (~ae & ac) -> ~ce
+Out, (~ae & ad) -> ~de
+Out, (~be & ~ab) -> ~ae
+Out, (~be & bc) -> ~ce
+Out, (~be & bd) -> ~de
+Out, (~ce & ~ac) -> ~ae
+Out, (~ce & ~bc) -> ~be
+Out, (~ce & cd) -> ~de
+Out, (~de & ~ad) -> ~ae
+Out, (~de & ~bd) -> ~be
+Out, (~de & ~cd) -> ~ce

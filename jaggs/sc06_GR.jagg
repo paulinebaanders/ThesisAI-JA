@@ -1,0 +1,26 @@
+# Scenario from (modified, reduced):
+#
+# Lang, Jérôme, Gabriella Pigozzi, Marija Slavkovik, and Leendert van der Torre (2011),
+# “Judgment Aggregation Rules Based on Minimization.” In Proceedings of
+# the 13th Conference on Theoretical Aspects of Rationality and Knowledge, 
+# 238–246.
+#
+# (See Proposition 3 (point 5) on page 242.)
+
+# Variables
+a, b, c, d, e
+
+# Number of issues
+7
+# The issues
+1, a
+2, a -> (b | c)
+3, b
+4, c
+5, a -> (d | e)
+6, d
+7, e
+
+# The constraints
+In, ( ~a | a )
+Out, ( ~a | a)
